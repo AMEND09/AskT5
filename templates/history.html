@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Messaging App - History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/replit.css') }}">
+  </head>
+  <body>
+    <h1>Messaging App - History</h1>
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">Back to messages</a>
+  </body>
+</html>
