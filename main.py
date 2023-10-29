@@ -9,7 +9,7 @@ def process_message(message):
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-small")
     tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
     inputs = tokenizer(message, return_tensors="pt")
-    outputs = model.generate(**inputs,  max_new_tokens = 2048, min_length = 10, length_penalty = 2, num_beams = 8, no_repeat_ngram_size = 2, early_stopping = True)
+    outputs = model.generate(**inputs,  max_new_tokens = 64, min_length = 10, length_penalty = 2, num_beams = 8, no_repeat_ngram_size = 2, early_stopping = True)
     return(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
 
