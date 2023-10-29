@@ -1,4 +1,5 @@
-from AskT5 import main
+from main import main
 
 if __name__ == "__main__":
     app.run()
+    
